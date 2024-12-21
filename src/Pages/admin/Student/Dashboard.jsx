@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import "./Dashboard.css";
+import "./dashboard.css";
 import { NavLink } from "react-router-dom";
 import { AuthStore } from "../../../store/AuthStore";
 
