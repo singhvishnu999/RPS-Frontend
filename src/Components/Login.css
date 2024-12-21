@@ -1,0 +1,55 @@
+/* General Styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+  }
+  
+  .login-container {
+    max-width: 400px;
+    margin: 80px auto;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    text-align: center;
+  }
+  
+  .login-container h1 {
+    font-size: 2rem;
+    color: #004d80;
+    margin-bottom: 20px;
+  }
+  
+  .login-form input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+  }
+  
+  .login-form .btn-primary {
+    width: 100%;
+    padding: 10px;
+    background-color: #004d80;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+  }
+  
+  .login-form .btn-primary:hover {
+    background-color: #003456;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .login-container {
+      width: 90%;
+    }
+  }
+  

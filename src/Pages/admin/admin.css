@@ -1,0 +1,11 @@
+.container{
+    display: grid;
+    grid-template-columns: 15vw auto 20vw;
+}
+
+.dashboard{
+    grid-column: 2/4;
+}
+.staff{
+    grid-column: 2/4;
+}

@@ -1,0 +1,165 @@
+/* General Styles */
+.student-table {
+  max-width: 80%; /* Utilize full display size */
+  margin: 30px auto;
+  text-align: center;
+  padding: 10px;
+  background-color: #fff; /* Optional for better visuals */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add shadow for aesthetics */
+  border-radius: 10px; /* Smooth corners */
+}
+
+.student-table h1 {
+  font-size: 2.5rem; /* Slightly larger for better visibility */
+  margin-bottom: 20px;
+  color: #004d80;
+}
+
+.add-student-form {
+  margin-bottom: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between; /* Utilize horizontal space */
+  gap: 10px; /* Spacing between items */
+}
+
+.add-student-form input {
+  flex: 1 1 calc(20% - 10px); /* Flexible input width */
+  min-width: 150px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.add-student-form select {
+  flex: 1 1 calc(20% - 10px);
+  min-width: 150px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.add-student-form .btn-primary {
+  flex: 1 1 calc(20% - 10px);
+  padding: 10px 20px;
+  background-color: #004d80;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.add-student-form .btn-primary:hover {
+  background-color: #003456;
+}
+
+/* Table Styles */
+table {
+  width: 100%; /* Full width */
+  border-collapse: collapse;
+  margin: 20px 0;
+}
+
+table th,
+table td {
+  padding: 10px;
+  border: 1px solid #ddd;
+  text-align: left;
+  font-size: 1rem;
+}
+
+table th {
+  background-color: #f0f8ff;
+  color: #004d80;
+}
+
+table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+/* Buttons for Actions */
+.btn-primary,
+.btn-danger {
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+}
+
+.btn-primary {
+  background-color: #004d80;
+}
+
+.btn-danger {
+  background-color: #d9534f;
+}
+
+.btn-primary:hover {
+  background-color: #003456;
+}
+
+.btn-danger:hover {
+  background-color: #c9302c;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .student-table h1 {
+    font-size: 2rem;
+  }
+
+  .add-student-form input,
+  .add-student-form select,
+  .add-student-form .btn-primary {
+    flex: 1 1 calc(40% - 10px);
+  }
+
+  table th,
+  table td {
+    font-size: 0.9rem;
+    padding: 8px;
+  }
+}
+
+@media (max-width: 768px) {
+  .student-table h1 {
+    font-size: 1.5rem;
+  }
+
+  .add-student-form {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .add-student-form input,
+  .add-student-form select,
+  .add-student-form .btn-primary {
+    flex: 1 1 calc(100% - 10px); /* Full width on small screens */
+  }
+
+  table th,
+  table td {
+    font-size: 0.8rem;
+    padding: 6px;
+  }
+}
+
+@media (max-width: 480px) {
+  .student-table h1 {
+    font-size: 1.2rem;
+  }
+
+  table th,
+  table td {
+    font-size: 0.7rem;
+    padding: 5px;
+  }
+
+  .add-student-form input,
+  .add-student-form select,
+  .add-student-form .btn-primary {
+    max-width: 100%;
+    margin: 5px auto;
+  }
+}

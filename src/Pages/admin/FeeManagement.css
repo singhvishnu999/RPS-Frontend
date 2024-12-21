@@ -1,0 +1,73 @@
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+  }
+  
+  .fee-management {
+    max-width: 800px;
+    margin: 20px auto;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .fee-management h1 {
+    text-align: center;
+    color: #004d80;
+    margin-bottom: 20px;
+  }
+  
+  .fee-form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .fee-form input,
+  .fee-form select{
+    flex: 1 1 calc(50% - 10px);
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+  }
+  
+  .fee-form .btn-primary {
+    flex: 1 1 100%;
+    padding: 10px;
+    background-color: #004d80;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .fee-form .btn-primary:hover {
+    background-color: #003456;
+  }
+  
+  .fee-table {
+    margin-top: 20px;
+  }
+  
+  .fee-table table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .fee-table th,
+  .fee-table td {
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #ddd;
+  }
+  
+  .fee-table th {
+    background-color: #f0f8ff;
+    color: #004d80;
+  }

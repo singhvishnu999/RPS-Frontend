@@ -1,0 +1,135 @@
+/* General Styles */
+.admission-page {
+    width: 100%;
+  }
+  
+  /* Hero Section */
+  .admission-hero {
+    background: linear-gradient(
+        rgba(0, 77, 128, 0.8),
+        rgba(0, 77, 128, 0.8)
+      ),
+      url("./admission-hero-bg.jpg") no-repeat center center/cover;
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+  }
+  
+  .admission-hero h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+  }
+  
+  .admission-hero p {
+    font-size: 1.5rem;
+  }
+  
+  /* Admission Steps */
+  .admission-steps {
+    padding: 40px 20px;
+    text-align: center;
+    background-color: #f9f9f9;
+  }
+  
+  .admission-steps h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #004d80;
+  }
+  
+  .admission-steps ol {
+    list-style: decimal inside;
+    font-size: 1.2rem;
+    color: #555;
+    line-height: 1.8;
+  }
+  
+  /* Admission Form Section */
+  .admission-form-section {
+    padding: 40px 20px;
+    text-align: center;
+  }
+  
+  .admission-form-section h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #004d80;
+  }
+  
+  .admission-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  .admission-form input,
+  .admission-form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+  }
+  
+  .admission-form textarea {
+    resize: none;
+  }
+  
+  .admission-form .btn-primary {
+    background-color: #004d80;
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: background 0.3s;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .admission-form .btn-primary:hover {
+    background-color: #003456;
+  }
+  
+  /* Footer */
+  .admission-footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #004d80;
+    color: white;
+    font-size: 0.9rem;
+  }
+
+  .quiz-test{
+    margin: 20px;
+    width: 95%;
+    height: 2.5rem;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+  }
+
+  .quiz:hover{
+    background-color: #1273b3;
+  }
+
+  .quiz{
+    background-color: #004d80;
+    width:9rem;
+    height: 3.5rem;
+    font-size: larger;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    border:2px solid #ddd;
+    border-radius: 5px;
+    color:#fff;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+  }
