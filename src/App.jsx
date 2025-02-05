@@ -16,7 +16,6 @@ import FeeManagement from './Pages/admin/FeeManagement'
 import Teacher from './Pages/admin/Teacher/Teacher '
 import { useEffect, useState } from 'react'
 import axios from 'axios'
-import Loader from './Components/Loader'
 
 function App() {
   const backendUrl = import.meta.env.VITE_BACKEND_URL;

@@ -35,18 +35,22 @@ const Auth = ({children}) => {
     }
 
     const handleLogin = async(user) => {
+      
       try{
+        setIsLoading(true);
             const response = await axios.post(`${backendUrl}/user/login`, user,
               {
                 withCredentials: true ,
                 headers: { "Content-Type": "application/x-www-form-urlencoded" },
               }
             );
+
             if(response.data.success) {
               toast.success("Logined SucessFully")
               navigate('/admin');
             }
-        }catch (err) {toast.error("Invalid Details") }   
+        }catch (err) {toast.error("Invalid Details") }  
+        setIsLoading(false); 
     }
 
   return (

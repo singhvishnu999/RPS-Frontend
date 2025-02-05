@@ -2,10 +2,9 @@ import React, { useContext, useState } from "react";
 import "./Login.css"; // Import custom styles
 import { AuthProvider } from "../store/Auth";
 
-
 const Login = () => {
   const [formData, setFormData] = useState({ username: "", password: "" });
-  const {handleLogin} = useContext(AuthProvider);
+  const { handleLogin } = useContext(AuthProvider);
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
@@ -13,7 +12,7 @@ const Login = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    handleLogin(formData)
+    handleLogin(formData);
   };
 
   return (
@@ -36,10 +35,12 @@ const Login = () => {
           onChange={handleChange}
           required
         />
-        <button type="submit" className="btn-primary">Login</button>
+        <button type="submit" className="btn-primary">
+          Login
+        </button>
       </form>
     </div>
-    )
+  );
 };
 
 export default Login;
