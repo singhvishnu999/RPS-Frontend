@@ -10,6 +10,7 @@ const Auth = ({children}) => {
     const navigate = useNavigate();
     const [refresh, setRefresh] = useState(false)
     const [isLoading, setIsLoading] = useState(true)
+    const [user, setUser] = useState(null);
 
 
     let token = undefined;
@@ -29,13 +30,14 @@ const Auth = ({children}) => {
       try{
         const response = await axios.get(`${backendUrl}/user/logout`,
            {withCredentials:true});
-        if(response.data.success)
+        if(response.data.success){
+          setUser(null);
           navigate('/' || '/login')
+        }
       }catch(err) {console.error(err.message)}
     }
 
-    const handleLogin = async(user) => {
-      
+    const handleLogin = async(user) => { 
       try{
         setIsLoading(true);
             const response = await axios.post(`${backendUrl}/user/login`, user,
@@ -47,14 +49,17 @@ const Auth = ({children}) => {
 
             if(response.data.success) {
               toast.success("Logined SucessFully")
+              setUser(response.data.user);
               navigate('/admin');
             }
         }catch (err) {toast.error("Invalid Details") }  
-        setIsLoading(false); 
+        finally {
+          setIsLoading(false); 
+        }
     }
 
   return (
-    <AuthProvider.Provider value={{token, handleLogin, isLoading, handleLogout}}>
+    <AuthProvider.Provider value={{token, handleLogin, isLoading, handleLogout, user}}>
         {children}
     </AuthProvider.Provider>
   )

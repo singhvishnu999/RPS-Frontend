@@ -15,7 +15,7 @@ const TeacherProvider = ({children}) => {
     .then((response)=>{
       setTeachers(response.data.teachers)
       setIsLoading(false)})
-    .catch(err=>alert("Network err in useEffect"));
+    .catch(err=>console.log(err));
    
   },[refresh])
 

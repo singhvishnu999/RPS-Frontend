@@ -14,27 +14,16 @@ import "react-toastify/dist/ReactToastify.css";
 import Login from './Components/Login'
 import FeeManagement from './Pages/admin/FeeManagement'
 import Teacher from './Pages/admin/Teacher/Teacher '
-import { useEffect, useState } from 'react'
-import axios from 'axios'
+import { useContext } from 'react'
+import ProtectedRoute from './Pages/admin/ProtectedRoute'
+import { AuthProvider } from './store/Auth'
 
 function App() {
-  const backendUrl = import.meta.env.VITE_BACKEND_URL;
-const [isAuthenticate, setIsAuthenticate] = useState(false)
-
-  useEffect(()=>{
-    const fetchToken = async() => {
-      const response = await axios.get(`${backendUrl}/getToken`, { withCredentials: true })
-      if(response.data.success){
-        setIsAuthenticate(true);
-        // setIsLoading(false);
-      }
-    }
-    fetchToken();
-  },[])
+  const {user} = useContext(AuthProvider);
 
   return (
     <>
-    <Navbar isAuthenticate={isAuthenticate}/>
+    <Navbar/>
     {/* {isLoading ? <Loader/> :  */}
     <Routes>
       <Route path='/' element={<Home/>} />
@@ -45,11 +34,10 @@ const [isAuthenticate, setIsAuthenticate] = useState(false)
       <Route path='/quiz' element={<Quiz/>} />  
       <Route path='/login' element={<Login/>} />
 
-      <Route path='/admin' element={isAuthenticate ? <Admin/> : <Login/>}> 
-          <Route path='student' element={isAuthenticate && <Student/>} />
-          <Route path='staff' element={isAuthenticate && <Teacher/>} />
-      </Route>
-    <Route path='admin/fee' element={isAuthenticate && <FeeManagement />}/>
+      <Route path='/admin' element={<ProtectedRoute> <Admin/> </ProtectedRoute>} /> 
+      <Route path='/admin/student' element={<ProtectedRoute> <Student/> </ProtectedRoute>} />
+      <Route path='/admin/staff' element={<ProtectedRoute> <Teacher/></ProtectedRoute>} />
+    <Route path='admin/fee' element={<ProtectedRoute> <FeeManagement /></ProtectedRoute>}/>
       
     </Routes>
     {/* } */}

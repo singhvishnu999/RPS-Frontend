@@ -9,7 +9,7 @@ import { AuthProvider } from "../store/Auth";
 const Navbar = () => {
   const [toggle, setToggle] = useState(false);
 
-    const {handleLogout} = useContext(AuthProvider)
+    const {handleLogout, user} = useContext(AuthProvider)
     const backendUrl = import.meta.env.VITE_BACKEND_URL;
     const [isAuthenticate, setIsAuthenticate] = useState(false)
     useEffect(()=>{
@@ -39,7 +39,7 @@ const Navbar = () => {
         <li> <NavLink to = "/admission" className={`${style.link}`}>admission</NavLink></li>
         <li> <NavLink to = "/gallery" className={`${style.link}`}>gallery</NavLink></li>
         <li> <NavLink to = "/contact" className={` ${style.link}`}>contact</NavLink></li>
-        {!isAuthenticate ? <li><NavLink to = "/admin" className={`${style.link}`}>admin</NavLink></li> :
+        {!user ? <li><NavLink to = "/login" className={`${style.link}`}>admin</NavLink></li> :
        <li> <button className={`${style.link}`} 
        onClick={()=> handleLogout()}>Logout</button></li> }
     </ul>

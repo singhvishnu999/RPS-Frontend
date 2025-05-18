@@ -36,8 +36,8 @@ const StudentProvider = ({children}) => {
         }else{
           toast.error("Failed to add student. Please try again.")
         }
-        setRefresh(!refresh)
         setIsLoading(false)
+        setRefresh(!refresh)
       };
 
       const deleteStudent = async(id, stClass) => {
@@ -66,9 +66,10 @@ const StudentProvider = ({children}) => {
             toast.error('Network error:', err.message);
           }
           toast.error('Failed to update student. Please try again.');
+        }finally {
+          setIsLoading(false)
+          setRefresh(!refresh)
         }
-        setRefresh(!refresh)
-        setIsLoading(false)
       };
 
       // Fee Management

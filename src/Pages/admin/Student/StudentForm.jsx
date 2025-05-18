@@ -26,7 +26,7 @@ const StudentForm = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     addStudent(newStudent);
-    
+
     setNewStudent({admissionNo:"",
       rollNo: "",
       name: "",
