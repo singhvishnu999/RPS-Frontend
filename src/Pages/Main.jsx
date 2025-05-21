@@ -1,5 +1,6 @@
 import React from "react";
 import "./Main.css";
+import { NavLink } from "react-router-dom";
 
 const Main = () => {
   return (
@@ -9,9 +10,9 @@ const Main = () => {
         <div className="hero-text">
           <h1>Welcome to Rohtas Public School</h1>
           <p>Empowering young minds since ESTD. 2020</p>
-          <a href="#about" className="btn-primary">
+          <NavLink to="/chat" className="btn-primary">
             Learn More
-          </a>
+          </NavLink>
         </div>
       </section>
 

@@ -17,6 +17,7 @@ import Teacher from './Pages/admin/Teacher/Teacher '
 import { useContext } from 'react'
 import ProtectedRoute from './Pages/admin/ProtectedRoute'
 import { AuthProvider } from './store/Auth'
+import ChatAi from './Pages/ChatAi'
 
 function App() {
   const {user} = useContext(AuthProvider);
@@ -32,6 +33,7 @@ function App() {
       <Route path='/gallery' element={<Gallery/>} />
       <Route path='/admission' element={<Admission/>} />
       <Route path='/quiz' element={<Quiz/>} />  
+      <Route path='/chat' element={<ChatAi/>} />
       <Route path='/login' element={<Login/>} />
 
       <Route path='/admin' element={<ProtectedRoute> <Admin/> </ProtectedRoute>} /> 
